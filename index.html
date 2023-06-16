@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operator = document.getElementById('operator').value;
+            var result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "Invalid operator";
+            }
+
+            document.getElementById('result').innerHTML = "Result: " + result;
+        }
+    </script>
+</head>
+<body>
+    <body bgcolor="#FFF5BA">
+    <h1><center>Arithmetic Operations</center></h1>
+    <h3><center>Perform your desired operations</center></center></h3>
+    <br></br>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1">
+    <br></br>
+    
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2">
+    <br></br>
+
+    <label for="operator">Operator:</label>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <br><br><center><button onclick="calculate()" style="background-color: aqua;">Calculate</button></center>
+
+    <div id="result"></div>
+</body>
+</html>
